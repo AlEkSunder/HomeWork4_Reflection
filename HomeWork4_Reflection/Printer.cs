@@ -15,7 +15,6 @@ namespace HomeWork4_Reflection
             PropertyInfo[] properties = type.GetProperties();            
             foreach (var item in properties)
             {
-                int i = 0;
                 PropertyInfo prop = type.GetProperty(item.Name);
                 Attribute propAttribute = prop.GetCustomAttribute(typeof(ColorAttribute));
                 Console.ForegroundColor = ((ColorAttribute)propAttribute).Color;                
